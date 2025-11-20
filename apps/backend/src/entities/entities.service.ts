@@ -12,7 +12,7 @@ export class EntitiesService {
       id: this.nextId++,
       ...createEntityDto,
     };
-    
+
     this.entities.push(newEntity);
 
     return newEntity;
