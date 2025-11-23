@@ -13,7 +13,7 @@ export const EntitiesPage = () => {
         ) : (
           <p>
             Oops something bad happend... <br />
-            <span className="text-red-700">{error?.message}</span>
+            <span className="text-destructive">{error?.message}</span>
           </p>
         )}
       </div>

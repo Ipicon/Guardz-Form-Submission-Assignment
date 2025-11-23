@@ -4,7 +4,7 @@ export const entitySchema = z.object({
   id: z.number(),
   name: z.string().min(1),
   email: z.email(),
-  age: z.number().min(18),
+  age: z.coerce.number().min(18),
   about: z.string().optional(),
 });
 
