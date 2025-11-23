@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "pnpm --filter ./apps/* --parallel dev",
     "backend:dev": "pnpm --filter backend dev",
-    "frontend:dev": "pnpm --filter frontend dev"
+    "frontend:dev": "pnpm --filter frontend dev",
+    "format": "pnpm --filter ./apps/* --parallel format",
+    "lint": "pnpm --filter ./apps/* --parallel lint"
   },
   "description": "Form submission assignment for Guardz",
   "pnpm": {
