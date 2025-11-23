@@ -99,7 +99,7 @@ Assignment → unnecessary overhead
 
 #### Or running each service individually
 - Frontend -> `pnpm --filter frontend dev`
-- Backend -> `pnpm --filter backebd dev`
+- Backend -> `pnpm --filter backend dev`
 
 ---
 
@@ -143,5 +143,6 @@ Backend → `http://<ip>:8080/entities`
 ---
 
 # 🎯 Summary
+
 
 This project demonstrates strong full‑stack fundamentals, monorepo tooling, Dockerization, cloud deployment, and testing best practices.
