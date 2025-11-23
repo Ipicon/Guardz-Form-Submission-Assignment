@@ -11,4 +11,5 @@ export const addEntity = (body: AddEntity) =>
   api('/entities', {
     body,
     method: 'POST',
+    schema: entitySchema
   });

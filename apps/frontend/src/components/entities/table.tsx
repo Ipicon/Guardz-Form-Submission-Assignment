@@ -1,12 +1,12 @@
 import { AddEntityButton } from './add-button';
 import { addEntitySchema, type Entity } from '@/schemas/entity';
-import { getSchemaKeys as getObjectSchemaKeys } from '@/lib/utils';
+import { getSchemaKeys } from '@/lib/utils';
 
 interface Props {
   entities: Entity[];
 }
 
-const entityKeys = getObjectSchemaKeys(addEntitySchema);
+const entityKeys = getSchemaKeys(addEntitySchema);
 
 export const EntitiesTable = ({ entities }: Props) => {
   return (
