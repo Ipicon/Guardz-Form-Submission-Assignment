@@ -7,7 +7,9 @@
     "backend:dev": "pnpm --filter backend dev",
     "frontend:dev": "pnpm --filter frontend dev",
     "format": "pnpm --filter ./apps/* --parallel format",
-    "lint": "pnpm --filter ./apps/* --parallel lint"
+    "lint": "pnpm --filter ./apps/* --parallel lint",
+    "test": "pnpm --filter ./apps/* --parallel test",
+    "test:e2e": "pnpm --filter backend test:e2e"
   },
   "description": "Form submission assignment for Guardz",
   "pnpm": {

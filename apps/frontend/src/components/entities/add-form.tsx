@@ -70,7 +70,7 @@ export const AddEntityForm = () => {
               rows={4}
             />
           </Field>
-          <Button type="submit" disabled={isPending}>
+          <Button name="submit" type="submit" disabled={isPending}>
             {isPending && <Spinner />} Submit
           </Button>
         </FieldGroup>
