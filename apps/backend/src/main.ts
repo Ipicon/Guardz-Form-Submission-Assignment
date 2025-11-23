@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
+import { createGlobalPipes } from './utils';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -12,13 +13,7 @@ async function bootstrap() {
    *  to the frontend domain only.
    */
   app.enableCors({ origin: '*' });
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-      forbidNonWhitelisted: true,
-      transform: true,
-    }),
-  );
+  app.useGlobalPipes(createGlobalPipes());
 
   await app.listen(port);
   console.log(`Server running on port ${port}`);
