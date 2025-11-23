@@ -1,13 +1,19 @@
 import { Injectable } from '@nestjs/common';
 import { CreateEntityDto } from './dto/create-entity.dto';
+import { Entity } from './entities/entity.entity';
 
 @Injectable()
 export class EntitiesService {
-  create(createEntityDto: CreateEntityDto) {
-    return 'This action adds a new entity';
+  private readonly entities: Entity[] = [];
+
+  create(createEntityDto: CreateEntityDto): Entity {
+    const newEntity = { ...createEntityDto };
+    this.entities.push(newEntity);
+
+    return newEntity;
   }
 
-  findAll() {
-    return `This action returns all entities`;
+  findAll(): Entity[] {
+    return this.entities;
   }
 }
