@@ -5,9 +5,14 @@ import { Entity } from './entities/entity.entity';
 @Injectable()
 export class EntitiesService {
   private readonly entities: Entity[] = [];
+  private nextId = 1;
 
   create(createEntityDto: CreateEntityDto): Entity {
-    const newEntity = { ...createEntityDto };
+    const newEntity: Entity = {
+      id: this.nextId++,
+      ...createEntityDto,
+    };
+    
     this.entities.push(newEntity);
 
     return newEntity;
