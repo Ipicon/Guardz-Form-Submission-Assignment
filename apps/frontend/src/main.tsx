@@ -3,15 +3,18 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { EntitiesPage, AddEntityPage } from '@/pages/entities';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
+import { ReactQueryProvider } from '@/providers/react-query-provider';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<EntitiesPage />} />
-        <Route path="/add-entity" element={<AddEntityPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
+    <ReactQueryProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<EntitiesPage />} />
+          <Route path="/add-entity" element={<AddEntityPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </ReactQueryProvider>
   </StrictMode>,
 );
