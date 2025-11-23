@@ -10,7 +10,7 @@ const renderWithProviders = (ui: ReactNode) => {
   const client = new QueryClient();
   return render(
     <QueryClientProvider client={client}>
-      <MemoryRouter> {ui}</MemoryRouter>
+      <MemoryRouter>{ui}</MemoryRouter>
     </QueryClientProvider>,
   );
 };
